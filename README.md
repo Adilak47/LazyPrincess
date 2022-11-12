@@ -96,11 +96,11 @@ python3 bot.py
 • /link - to create link for one post
 ```
 ## Support
-[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/LazyPrincessSupport)
-[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/LazyDevelopers)
+[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/Cinemataxi2)
+[![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/Cinemataxi2)
 
 ## Credits 
-* [![LazyPrincess-Devs](https://img.shields.io/static/v1?label=LazyPrincess&message=devs&color=critical)](https://telegram.dog/LazyDevelopers)
+* [![adylak](https://img.shields.io/static/v1?label=LazyPrincess&message=devs&color=critical)](https://telegram.dog/Cinemataxi2)
 
 
 ## Thanks to 
@@ -111,7 +111,7 @@ python3 bot.py
 
 ### Note
 
-[Join Main Channel](https://telegram.dog/LazyDevelopers): 
+[Join Main Channel](https://telegram.dog/cinemataxi2): 
 
 ## Disclaimer
 [![GNU Affero General Public License 2.0](https://www.gnu.org/graphics/agplv3-155x51.png)](https://www.gnu.org/licenses/agpl-3.0.en.html#header)    
