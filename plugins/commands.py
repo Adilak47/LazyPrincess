@@ -360,15 +360,15 @@ async def delete_all_index(bot, message):
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
     await Media.collection.drop()
-    await message.answer('🙈 I love you dear Developer indu ♥️')
-    await message.message.edit('Chal Sona, Index kiya hua saara file delete ho gya! Ab aage bolo 🤪 ')
+    await message.answer('🙈 I love you dear Developer ♥️')
+    await message.message.edit('Come on, all indexed files are deleted! speak now 🤪 ')
   
 
 @Client.on_message(filters.command('settings'))
 async def settings(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"Oye Anzaan Admin ji, kripaa kr ye command ko mujhe kopche m bhejo 👉 Use /connect {message.chat.id} in PM")
+        return await message.reply(f"Dear unknown admin, please send this command to me 👉 Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":
@@ -379,10 +379,10 @@ async def settings(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Arey Sona ek dfa fir se dekh lo ki main tumhaare kisi group hun bhi ya nhi... 😂", quote=True)
+                await message.reply_text("ഹേയ് സോന, ഞാൻ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ഉണ്ടോ ഇല്ലയോ എന്ന് ഒരിക്കൽ കൂടി പരിശോധിക്കുക.... 😂", quote=True)
                 return
         else:
-            await message.reply_text("Arey! Arey! pehle mujhe kisi group mei ADD toh krr lo ji... 🤭", quote=True)
+            await message.reply_text("ഹേയ്! ഹേയ്! ആദ്യം എന്നെ ഏതെങ്കിലും ഗ്രൂപ്പിൽ ചേർക്കുക... 🤭", quote=True)
             return
 
     elif chat_type in ["group", "supergroup"]:
@@ -469,7 +469,7 @@ async def settings(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
 
         await message.reply_text(
-            text=f"<b>{title} ka apne hisaab se jo - jo setting change krna chahte ho krr lo 🧰 !</b>",
+            text=f"<b>{title} നിങ്ങൾക്ക് അനുസരിച്ച് ക്രമീകരണം മാറ്റാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നതെന്തും ചെയ്യുക 🧰 !</b>",
             reply_markup=reply_markup,
             disable_web_page_preview=True,
             parse_mode="html",
@@ -483,7 +483,7 @@ async def save_template(client, message):
     sts = await message.reply("Checking template")
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"Oye Anzaan Admin ji, kripaa kr ye command ko mujhe kopche m bhejo 👉 Use /connect {message.chat.id} in PM")
+        return await message.reply(f"Dear unknown admin, please send this command to me 👉 Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == "private":
@@ -494,10 +494,10 @@ async def save_template(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Arey Sona ek dfa fir se dekh lo ki main tumhaare kisi group hun bhi ya nhi... 😂", quote=True)
+                await message.reply_text("ഏയ് Bro, ഞാൻ നിന്റെ കൂട്ടത്തിലുണ്ടോ ഇല്ലയോ എന്ന് ഒരിക്കൽ കൂടി നോക്കൂ... 😂", quote=True)
                 return
         else:
-            await message.reply_text("Arey! Arey! pehle mujhe kisi group mei ADD toh krr lo... 🤭", quote=True)
+            await message.reply_text(""ഹേയ്! ഹേയ്! ആദ്യം എന്നെ ഏതെങ്കിലും ഗ്രൂപ്പിൽ ആഡ് ചെയ്യൂ... 🤭", quote=True)
             return
 
     elif chat_type in ["group", "supergroup"]:
@@ -519,4 +519,4 @@ async def save_template(client, message):
         return await sts.edit("No Input!!")
     template = message.text.split(" ", 1)[1]
     await save_group_settings(grp_id, 'template', template)
-    await sts.edit(f"Chal bidu kaam ho gya... 👉 {title} ka template ye kr diye 👉\n\n{template}")
+    await sts.edit(f"പണി ചെയ്തു... 👉 {title} എന്നതിന്റെ ടെംപ്ലേറ്റ് ഇതാ 👉\n\n{template}")
